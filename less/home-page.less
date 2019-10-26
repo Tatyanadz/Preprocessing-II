@@ -1,26 +1,33 @@
 .home {
-
+  .header-img img{
+    border-radius: 8px;
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    border-top: 2px dashed @navigation-border;
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      padding-top: 30px;
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      padding-top: 30px;
 
       img {
         border-radius: 10px;
       }
     }
+  }
+
+  .header-text {
+    padding: 20px 0 0 0;
   }
 
   .inverse-content {
@@ -46,6 +53,10 @@
       border-radius: 10px;
     }
   }
+  
+  .btn {
+    .btn-design(space-between, center);
+  } 
 
   .content-pick {
     padding-top: 30px;
@@ -59,3 +70,79 @@
     }
   }
 }// home
+
+@media @mobile {
+  .container {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    h1 {
+      justify-content: center;
+      padding: 0 0 0 150px;
+      font-size: 48px;
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      padding: 0 20px 0 0;
+      a {
+        font-size: 24px;
+        padding: 20px;
+      }
+    }
+  }
+
+  .content-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .img-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 500px;
+    padding: 0 10px 0 0;
+  }
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    p {
+      width: 500px;
+    }
+  }
+  .content-destination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 500px;
+  }
+  
+  img {
+    width: 500px;
+  }
+
+  .content-pick {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    .destination {
+      min-width: 400px;
+      padding: 0 0 0 100px;
+    }
+  }
+}
